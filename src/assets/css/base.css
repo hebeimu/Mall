@@ -1,0 +1,61 @@
+@import "./normalize.css";
+
+
+/*:root 是伪类，选中的是根标签html，里面定义的是样式变量*/
+:root {
+  --color-text: #666;    /*文字颜色*/
+  --color-height-text: #ff5777; /*文字高亮时候的颜色*/
+  --color-tint: #ff8198;  /*设置小块区域背景颜色，例如：导航*/
+  --color-background: #fff; /*背景颜色*/
+  --font-size: 14px;  /*字体大小*/
+  --line-height: 1.5; /*行高*/
+}
+
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Helvetica Neue",Helvetica,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",
+  "微软雅黑"，Arial,sans-serif;
+  user-select:none; /*禁止用户鼠标在页面上选中图片、文字等*/
+  -webkit-tap-highlight-color: transparent; /*webkit 是苹果浏览器引擎，tap 点击，highlight 
+    背景高亮， clolor 颜色*/
+  background: val(--color-background);
+  color: var(--color-text);
+  width: 100vw;
+}
+
+a {
+  color: val(--color-text);
+  text-decoration: none;
+}
+
+.clear-fix::after {
+  clear: both;
+  content: '';
+  display: block;
+  width: 0;
+  height: 0;
+  visibility: hidden;
+}
+
+.clear-fix {
+  zoom: 1;
+}
+
+
+.left {
+  float: left;
+}
+
+.right {
+  float: right;
+}
+
+
